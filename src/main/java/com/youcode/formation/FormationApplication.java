@@ -17,20 +17,20 @@ public class FormationApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(FormationApplication.class, args);
 
-		ApplicationContext app =
+		AnnotationConfigApplicationContext app =
 				new AnnotationConfigApplicationContext(PrimaryConfig.class);
 
 //		Consommateur consommateur = app.getBean(Consommateur.class);
 //		AuditExterne ap = app.getBean(AuditExterne.class);
 //		System.out.println(ap.info());
 
-//		DemoRunner demo = app.getBean(DemoRunner.class);
-//
-//		demo.run();
+		DemoRunner demo = app.getBean(DemoRunner.class);
+
+		demo.run();
 
 		ServiceCycleDevie cycledevie = app.getBean(ServiceCycleDevie.class);
 
-
+		app.close();
 
 	}
 }
