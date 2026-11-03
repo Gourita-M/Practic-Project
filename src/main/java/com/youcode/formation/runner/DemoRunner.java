@@ -19,6 +19,7 @@ public class DemoRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args){
+
         CompteurSingleton s1 = applicationContext.getBean(CompteurSingleton.class);
         CompteurSingleton s2 = applicationContext.getBean(CompteurSingleton.class);
 
