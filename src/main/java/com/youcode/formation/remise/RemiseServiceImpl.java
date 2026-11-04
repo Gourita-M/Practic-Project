@@ -21,7 +21,7 @@ public class RemiseServiceImpl implements RemiseService{
                 //.orElse(null)
                 .orElseThrow(
                         () -> new IllegalArgumentException(
-                                "Can't Be Find"
+                                "Can't Be Found"
                         ))
                 .appliquer(montant);
     }
